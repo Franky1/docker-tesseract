@@ -1,0 +1,6 @@
+FROM alpine:3.6
+
+# install tesseract from edge repository:
+RUN apk update \
+ && apk add tesseract-ocr --update-cache --repository http://dl-3.alpinelinux.org/alpine/edge/community/ --allow-untrusted \
+ && apk cache clean
