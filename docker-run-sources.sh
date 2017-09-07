@@ -4,5 +4,5 @@ docker run \
   --name tesseract \
   --hostname tesseract \
   --mount source=/var/tesseract/samples,target=/var/tesseract/samples
-  tesseract:main \
+  tesseract:sources \
   /bin/bash

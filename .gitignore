@@ -1,1 +1,6 @@
-
+*.bak
+*.tmp
+*.tiff
+*.txt
+*.jpg
+*.pdf

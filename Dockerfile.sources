@@ -1,0 +1,28 @@
+# This Dockerfile is a draft and is neither tested nor optimized
+# Maybe change to Alpine Linux if possible
+FROM debian:stretch
+
+# install tesseract dependencies:
+RUN apt-get update -y
+RUN apt-get install -y autoconf-archive
+RUN apt-get install -y automake
+RUN apt-get install -y g++
+RUN apt-get install -y libtool
+RUN apt-get install -y libleptonica-dev
+RUN apt-get install -y pkg-config
+RUN apt-get install -y libpango1.0-dev
+RUN apt-get install -y git
+RUN apt-get autoremove -y
+RUN apt-get clean -y
+# install tesseract from sources:
+RUN git clone --depth 1 https://github.com/tesseract-ocr/tesseract.git tesseract-ocr
+WORKDIR tesseract-ocr
+RUN ./autogen.sh
+RUN ./configure
+RUN make
+RUN make install
+RUN ldconfig
+
+# I know it is not recommended to use RUN in every single line
+# It produces a lot of image layers
+# Will be cleaned up after successful testing
