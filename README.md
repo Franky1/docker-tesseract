@@ -12,14 +12,14 @@ Original Tesseract Sources and Wiki see **[Tesseract GitHub Repository](https://
 
 _____
 ## Status of this Repository
-Latest changes in this repository were made on **2017-09-08**
-#### Versions (2017-09-08)
+Latest changes in this repository were made on **2017-09-12**
+#### Versions (2017-09-12)
 - Current Alpine Linux version: `3.6`
 - Current stable Tesseract `apk` binary version: `3.04.01-r1` from Alpine-Linux `main` Repository
 - Latest stable Tesseract `apk` binary version: `3.05.01-r2` from Alpine-Linux `edge` Repository   
 - To build the latest Tesseract development versions `4.xx.xx` from the sources see **[Tesseract Wiki](https://github.com/tesseract-ocr/tesseract/wiki)**
 
-#### ToDo (2017-09-08)  
+#### ToDo (2017-09-12)  
 - Test all bash scripts and Dockerfiles
 - Add build options for the `main/edge` alpine linux branches
 - Add build options for language data packages
@@ -28,8 +28,8 @@ Latest changes in this repository were made on **2017-09-08**
 - Add python wrapper and some sort of Interface/API to the container
 - Maybe adding file triggers for automatic OCR transformation (?)
 
-#### Disclaimer (2017-09-08)  
-- This repo is under development. ___Do not use it in this stage!___
+#### Disclaimer (2017-09-12)  
+- This repo is under development. ___Do not use it in this stage!!!___
 - Dockerfiles and Bash scripts are _only drafts and are not tested yet_  
 - I'm neither a Docker nor a Linux expert, so be patient...  
 

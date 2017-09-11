@@ -2,5 +2,4 @@ FROM alpine:3.6
 
 # install tesseract from main repository:
 RUN apk update \
- && apk add --no-cache --update tesseract-ocr \
- && apk cache clean
+&& apk add --no-cache --update tesseract-ocr
