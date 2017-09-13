@@ -26,3 +26,5 @@ RUN ldconfig
 # I know it is not recommended to use RUN in every single line
 # It produces a lot of image layers
 # Will be cleaned up after successful testing
+
+WORKDIR /var/tesseract/samples

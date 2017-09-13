@@ -3,6 +3,6 @@ docker run \
   --tty \
   --name tesseract \
   --hostname tesseract \
-  --mount source=/var/tesseract/samples,target=/var/tesseract/samples
+  --volume /var/tesseract/samples:/var/tesseract/samples \
   tesseract:edge \
-  /bin/bash
+  /bin/sh
