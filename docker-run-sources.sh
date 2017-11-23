@@ -5,4 +5,4 @@ docker run \
   --hostname tesseract \
   --volume /var/tesseract/samples:/var/tesseract/samples \
   tesseract:sources \
-  /bin/bash
+  /bin/sh
