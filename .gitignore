@@ -1,6 +1,9 @@
 *.bak
 *.tmp
 *.tiff
+*.tif
+*.bmp
 *.txt
 *.jpg
+*.jpeg
 *.pdf

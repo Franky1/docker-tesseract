@@ -19,8 +19,9 @@ Latest changes in this repository were made on **2017-09-14**
 - Latest stable Tesseract `apk` binary version: `3.05.01-r2` from Alpine-Linux `edge` Repository   
 - To build the latest Tesseract development versions `4.xx.xx` from the sources see **[Tesseract Wiki](https://github.com/tesseract-ocr/tesseract/wiki)**
 
-#### ToDo (2017-09-14)  
+#### ToDo (2017-11-23)  
 - Test all bash scripts and Dockerfiles
+- Add tessdata to the build scripts
 - Maybe have to install the language packages also (?)
 - Add build options for the `main/edge` alpine linux branches
 - Add build options for language data packages
@@ -64,6 +65,6 @@ _____
 From the original Tesseract Wiki Documentation.  
 Basic **[command line usage](https://github.com/tesseract-ocr/tesseract/wiki/Command-Line-Usage)**:  
 
-    tesseract imagename outputbase [-l lang] [--oem ocrenginemode] [--psm pagesegmode] [configfiles...]
+tesseract imagename outputbase [-l lang] [--oem ocrenginemode] [--psm pagesegmode] [configfiles...]  
 
-  For more information about the various command line options use `tesseract --help` or `man tesseract`.
+For more information about the various command line options use `tesseract --help` or `man tesseract`.
