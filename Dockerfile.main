@@ -2,8 +2,8 @@ FROM alpine:3.6
 
 # install tesseract from main repository:
 RUN apk update \
+&& apk add --no-cache wget \
 && apk add --no-cache --update tesseract-ocr \
-&& apk add --no-cache --update tesseract-ocr-eng \
-&& apk add --no-cache --update tesseract-ocr-data-deu \
-
+&& wget --no-check-certificate https://github.com/tesseract-ocr/tessdata/raw/3.04.00/eng.traineddata -P /usr/share/tessdata \
+&& wget --no-check-certificate https://github.com/tesseract-ocr/tessdata/raw/3.04.00/deu.traineddata -P /usr/share/tessdata
 WORKDIR /var/tesseract/samples
