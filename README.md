@@ -8,21 +8,21 @@ _There will be a Dockerfile and scripts for building latest tesseract developmen
 ## Tesseract
 Tesseract is an Open Source OCR Engine.  
 The latest stable Tesseract version is `3.05.01` released on `2017-06-01`   
-Original Tesseract Sources and Wiki see **[Tesseract GitHub Repository](https://github.com/tesseract-ocr/tesseract/)**
+Original **Tesseract Sources** and **Tesseract Wiki** see **[Tesseract GitHub Repository](https://github.com/tesseract-ocr/tesseract/)**
 
 _____
 ## Status of this Repository
-Latest changes in this repository were made on **2017-09-14**
-#### Versions (2017-09-14)
+Latest changes in this repository were made on **2017-11-27**
+#### Versions (2017-11-27)
 - Current Alpine Linux version: `3.6`
 - Current stable Tesseract `apk` binary version: `3.04.01-r1` from Alpine-Linux `main` Repository
 - Latest stable Tesseract `apk` binary version: `3.05.01-r2` from Alpine-Linux `edge` Repository   
 - To build the latest Tesseract development versions `4.xx.xx` from the sources see **[Tesseract Wiki](https://github.com/tesseract-ocr/tesseract/wiki)**
 
-#### ToDo (2017-11-23)  
+#### ToDo (2017-11-27)  
 - Test all bash scripts and Dockerfiles
 - Add tessdata to the build scripts
-- Maybe have to install the language packages also (?)
+- Write Makefile for easier build options
 - Add build options for the `main/edge` alpine linux branches
 - Add build options for language data packages
 - Write scripts and Dockerfile for source build
@@ -30,9 +30,8 @@ Latest changes in this repository were made on **2017-09-14**
 - Add `python:3.6-alpine3.6` layer and a python wrapper library `pytesseract` and some sort of Interface/API to the container
 - Maybe adding file triggers for automatic OCR transformation (?)
 
-#### Disclaimer (2017-09-14)  
-- This repo is under development. ___Scripts are not finished yet!!! Do not use it in this stage!!!___
-- Dockerfiles and Bash scripts are _only drafts and are not tested yet_  
+#### Disclaimer (2017-11-27)  
+- This repo is under development. ___Scripts are not finished yet!___
 - I'm neither a Docker nor a Linux expert, so be patient...  
 
 _____
@@ -40,16 +39,14 @@ _____
 ### Docker Containers built from binary packages
 #### Tesseract Docker Container based on Alpine Linux and `apk` binary `main` repository
 - Image based on Alpine Linux Image `alpine:3.6`
-- Installs Dependencies for Tesseract (?)
 - Installs Tesseract from Alpine Linux Repository `main` branch
-- Installs Language Data package for Tesseract (?)
+- Installs Language Data package for ENG and DEU (English and German)
 - Tesseract Version `3.04.01-r1`
 
 #### Tesseract Docker Container based on Alpine Linux and `apk` binary `edge` repository
 - Image based on Alpine Linux Image `alpine:3.6`
-- Installs Dependencies for Tesseract (?)
 - Installs Tesseract from Alpine Linux Repository `edge` branch
-- Installs Language Data package for Tesseract (?)
+- Installs Language Data package for ENG and DEU (English and German)
 - Tesseract Version `3.05.01-r2`
 
 ### Docker Containers built from sources

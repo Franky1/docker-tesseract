@@ -1,4 +1,4 @@
-build-main:
+build:
 	docker build --file Dockerfile.main --tag tesseract:main .
 
 build-edge:
@@ -7,32 +7,32 @@ build-edge:
 build-sources:
 	docker build --file Dockerfile.sources --tag tesseract:sources .
 
-run-main:
+run:
 	docker run \
-	 --interactive \
-	 --tty \
-	 --name tesseract \
-	 --hostname tesseract \
-	 --volume /var/tesseract/samples:/var/tesseract/samples \
-	 tesseract:main \
-	 /bin/sh
+	--interactive \
+	--tty \
+	--name tesseract \
+	--hostname tesseract \
+	--volume /var/tesseract/samples:/var/tesseract/samples \
+	tesseract:main \
+	/bin/sh
 
 run-edge:
 	docker run \
-	  --interactive \
-	  --tty \
-	  --name tesseract \
-	  --hostname tesseract \
-	  --volume /var/tesseract/samples:/var/tesseract/samples \
-	  tesseract:edge \
-	  /bin/sh
+	--interactive \
+	--tty \
+	--name tesseract \
+	--hostname tesseract \
+	--volume /var/tesseract/samples:/var/tesseract/samples \
+	tesseract:edge \
+	/bin/sh
 
 run-sources:
 	docker run \
-	  --interactive \
-	  --tty \
-	  --name tesseract \
-	  --hostname tesseract \
-	  --volume /var/tesseract/samples:/var/tesseract/samples \
-	  tesseract:sources \
-	  /bin/sh
+	--interactive \
+	--tty \
+	--name tesseract \
+	--hostname tesseract \
+	--volume /var/tesseract/samples:/var/tesseract/samples \
+	tesseract:sources \
+	/bin/sh
